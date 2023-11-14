@@ -1,0 +1,21 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.shop
+{
+    width: 100%;
+    padding: 20px 30px;
+}
+.shop .container
+{
+    max-width: 100%;
+    display: flex;
+}
+.shop .container .left_box
+{
+    width: 30%;
+}

@@ -5,7 +5,7 @@ const Homeproduct =
         Name: 'product1',
         price: '26',
         image: 'image/p1.webp',
-        cat: '',
+        cat: 'tv',
         type: 'new',
     },
     {
@@ -13,7 +13,7 @@ const Homeproduct =
         Name: 'product2',
         price: '96',
         image: 'image/p2.webp',
-        cat: '',
+        cat: 'laptop',
         type: 'new',
     },
     {
@@ -21,7 +21,7 @@ const Homeproduct =
         Name: 'product3',
         price: '236',
         image: 'image/p3.webp',
-        cat: '',
+        cat: 'watch',
         type: 'new',
     },
     {
@@ -29,7 +29,7 @@ const Homeproduct =
         Name: 'product4',
         price: '636',
         image: 'image/p9.jpg',
-        cat: '',
+        cat: 'laptop',
         type: 'new',
     },
     {
@@ -37,7 +37,7 @@ const Homeproduct =
         Name: 'product5',
         price: '98',
         image: 'image/p4.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'featured',
     },
     {
@@ -45,7 +45,7 @@ const Homeproduct =
         Name: 'product6',
         price: '59',
         image: 'image/p5.webp',
-        cat: '',
+        cat: 'electronics',
         type: 'featured',
     },
     {
@@ -53,7 +53,7 @@ const Homeproduct =
         Name: 'product7',
         price: '956',
         image: 'image/p10.jpg',
-        cat: '',
+        cat: 'headphone',
         type: 'featured',
     },
     {
@@ -61,7 +61,7 @@ const Homeproduct =
         Name: 'product8',
         price: '389',
         image: 'image/p11.jpg',
-        cat: '',
+        cat: 'electronics',
         type: 'featured',
     },
     {
