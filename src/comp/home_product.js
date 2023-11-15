@@ -69,7 +69,7 @@ const Homeproduct =
         Name: 'product9',
         price: '67',
         image: 'image/p6.webp',
-        cat: '',
+        cat: 'phone',
         type: 'top',
     },
     {
@@ -77,14 +77,14 @@ const Homeproduct =
         Name: 'product10',
         price: '76',
         image: 'image/p7.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },{
         id: 11,
         Name: 'product11',
         price: '87',
         image: 'image/p8.webp',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },
     {
@@ -92,7 +92,7 @@ const Homeproduct =
         Name: 'product12',
         price: '807',
         image: 'image/p12.jpg',
-        cat: '',
+        cat: 'speaker',
         type: 'top',
     },
     
