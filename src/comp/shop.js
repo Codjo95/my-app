@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './shop.css'
-import { AiFillEye, AiFillHeart } from 'react-icons/ai'
-function Shop({shop, Filter, allcatefilter}) {
+import { AiFillEye, AiFillHeart, AiOutlineClose } from 'react-icons/ai'
+function Shop({shop, Filter, allcatefilter, addtocart}) {
+  //Toggle Product Detail
+  const [showDetail, setShowDetail ] = useState(false)
+  //Showing Detail Box
+  const detailpage = () =>
+  {
+    setShowDetail(true)
+  }
   return (
     <>
+    {
+      showDetail ?
+      <>
+      <div className='product_detail'>
+        <button><AiOutlineClose /></button>
+      </div>
+      </>
+      : null
+    }
+    
     <div className='shop'>
       <h2># shop</h2>
       <p>Home . shop</p>
@@ -52,13 +69,13 @@ function Shop({shop, Filter, allcatefilter}) {
                           <img src={curElm.image} alt=''></img>
                           <div className='icon'>
                             <li><AiFillHeart /></li>
-                            <li><AiFillEye /></li>
+                            <li onClick={detailpage}><AiFillEye /></li>
                           </div>
                         </div>
                         <div className='detail'>
                           <h3>{curElm.Name}</h3>
                           <p>$ {curElm.price}</p>
-                          <button>Add To Cart</button>
+                          <button onClick={() => addtocart (curElm)}>Add To Cart</button>
                         </div>
                       </div>
                       </>

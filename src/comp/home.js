@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Homeproduct from './home_product'
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoYoutube } from "react-icons/bi"
-const Home = () => {
+const Home = ({addtocart}) => {
   // Product category
   const [newProduct, setNewProduct] = useState([])
   const [featuredProduct, setFeaturedProduct] = useState([])
@@ -99,7 +99,7 @@ const Home = () => {
                                             <div className='info'>
                                                 <h3>{curElm.Name}</h3>
                                                 <p>${curElm.price}</p>
-                                                <button className='btn'>Add to cart</button>
+                                                <button className='btn' onClick={() => addtocart(curElm)}>Add to cart</button>
                                             </div>
                                        </div>
                                        </> 
@@ -197,7 +197,7 @@ const Home = () => {
                                             <div className='icon'>
                                                 <button><AiFillEye /></button>
                                                 <button><AiFillHeart /></button>
-                                                <button><AiOutlineShoppingCart /></button>
+                                                <button onClick={() => addtocart(curElm)}><AiOutlineShoppingCart /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@ const Home = () => {
                                             <div className='icon'>
                                                 <button><AiFillEye /></button>
                                                 <button><AiFillHeart /></button>
-                                                <button><AiOutlineShoppingCart /></button>
+                                                <button onClick={() => addtocart(curElm)}><AiOutlineShoppingCart /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -253,7 +253,7 @@ const Home = () => {
                                             <div className='icon'>
                                                 <button><AiFillEye /></button>
                                                 <button><AiFillHeart /></button>
-                                                <button><AiOutlineShoppingCart /></button>
+                                                <button onClick={() => addtocart(curElm)}><AiOutlineShoppingCart /></button>
                                             </div>
                                         </div>
                                     </div>
