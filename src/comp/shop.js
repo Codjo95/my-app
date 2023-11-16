@@ -4,10 +4,21 @@ import { AiFillEye, AiFillHeart, AiOutlineClose } from 'react-icons/ai'
 function Shop({shop, Filter, allcatefilter, addtocart}) {
   //Toggle Product Detail
   const [showDetail, setShowDetail ] = useState(false)
+  // Detail Page Data
+  const [detail, setDetail] = useState([])
   //Showing Detail Box
-  const detailpage = () =>
+  const detailpage = (product) =>
   {
+    const detaildata = ([{product}])
+    const productdetail = detaildata[0]['product']
+    // console.log(productdetail)
+    setDetail(productdetail)
     setShowDetail(true)
+  }
+  
+  const closedetail = () =>
+  {
+    setShowDetail(false)
   }
   return (
     <>
@@ -15,7 +26,19 @@ function Shop({shop, Filter, allcatefilter, addtocart}) {
       showDetail ?
       <>
       <div className='product_detail'>
-        <button><AiOutlineClose /></button>
+        <button className='close_btn' onClick={closedetail}><AiOutlineClose /></button>
+        <div className='container'>
+          <div className='img_box'>
+            <img src={detail.image} alt=''></img>
+          </div>
+          <div className='info'>
+            <h4># {detail.cat}</h4>
+            <h2>{detail.Name}</h2>
+            <p>A Screen Everyone Will Love: Whether your family is streaming or video chatting with friends tablet A8...</p>
+            <h3>${detail.price}</h3>
+            <button onClick={() => addtocart (detail)}>Add To Cart</button>
+          </div>
+        </div>
       </div>
       </>
       : null
@@ -69,7 +92,7 @@ function Shop({shop, Filter, allcatefilter, addtocart}) {
                           <img src={curElm.image} alt=''></img>
                           <div className='icon'>
                             <li><AiFillHeart /></li>
-                            <li onClick={detailpage}><AiFillEye /></li>
+                            <li onClick={() => detailpage (curElm)}><AiFillEye /></li>
                           </div>
                         </div>
                         <div className='detail'>
